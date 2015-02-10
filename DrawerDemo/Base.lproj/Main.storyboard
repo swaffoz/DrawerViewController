@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Drawer Panel View Controller-->
+        <scene sceneID="6sg-ko-aWC">
+            <objects>
+                <viewController storyboardIdentifier="DrawerPanelViewController" id="eco-Lk-dUf" customClass="DrawerPanelViewController" customModule="DrawerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dDk-Lh-xyb"/>
+                        <viewControllerLayoutGuide type="bottom" id="jrT-7y-AXT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RdS-o9-kP2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjW-5d-5Ov">
+                                <rect key="frame" x="16" y="226" width="258" height="147"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="258" id="llQ-V2-wOd"/>
+                                    <constraint firstAttribute="height" constant="147" id="spp-4z-r7Z"/>
+                                </constraints>
+                                <string key="text">This is a DrawerPanelViewController. You can put arbitrary UIViews in here, just like any other UIViewController. It can be hidden by tapping the menu button on the main DrawerViewController or swiping.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sjW-5d-5Ov" firstAttribute="leading" secondItem="RdS-o9-kP2" secondAttribute="leadingMargin" id="LZa-mZ-DEc"/>
+                            <constraint firstAttribute="centerY" secondItem="sjW-5d-5Ov" secondAttribute="centerY" id="e7E-RK-Qu8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fp0-yG-2L7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-585" y="147"/>
+        </scene>
+        <!--Drawer View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="DrawerViewController" id="BYZ-38-t0r" customClass="DrawerViewController" customModule="DrawerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poo-D6-Hk6">
+                                <rect key="frame" x="140" y="236" width="320" height="128"/>
+                                <color key="backgroundColor" red="0.69803921570000005" green="0.84313725490000002" blue="1" alpha="0.5" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="T8T-8m-DMH"/>
+                                    <constraint firstAttribute="height" constant="128" id="bgO-zP-Sbb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Open Drawer">
+                                    <color key="titleColor" red="0.38431372549999998" green="0.63529411759999999" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="menuButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jhy-jB-ovh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="poo-D6-Hk6" secondAttribute="centerX" id="4YV-bh-TGM"/>
+                            <constraint firstAttribute="centerY" secondItem="poo-D6-Hk6" secondAttribute="centerY" id="N5i-xd-gY7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
